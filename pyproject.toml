@@ -8,6 +8,8 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
+mkdocs-material = {extras = ["imaging"], version = "^9.4.7"}
+cairosvg = "^2.7.1"
 
 
 [build-system]
