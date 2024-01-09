@@ -1,0 +1,779 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../classification_of_data_structure/">
+      
+      
+        <link rel="next" href="../summary/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>数字编码 * - MkDocs YouTube Tutorial</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="MkDocs YouTube Tutorial" class="md-header__button md-logo" aria-label="MkDocs YouTube Tutorial" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MkDocs YouTube Tutorial
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              数字编码 *
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  Chapter data structure
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MkDocs YouTube Tutorial" class="md-nav__button md-logo" aria-label="MkDocs YouTube Tutorial" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    MkDocs YouTube Tutorial
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Chapter data structure
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Chapter data structure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic_data_types/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    基本数据类型
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../character_encoding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    字符编码 *
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../classification_of_data_structure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构分类
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    数字编码 *
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    数字编码 *
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      整数编码
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      浮点数编码
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../summary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    小结
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="_1">数字编码 *</h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>在本书中，标题带有的 * 符号的是选读章节。如果你时间有限或感到理解困难，可以先跳过，等学完必读章节后再单独攻克。</p>
+</div>
+<h2 id="_2">整数编码</h2>
+<p>在上一节的表格中我们发现，所有整数类型能够表示的负数都比正数多一个，例如 <code>byte</code> 的取值范围是 <span class="arithmatex">\([-128, 127]\)</span> 。这个现象比较反直觉，它的内在原因涉及到原码、反码、补码的相关知识。</p>
+<p>首先需要指出，<strong>数字是以“补码”的形式存储在计算机中的</strong>。在分析这样做的原因之前，我们首先给出三者的定义。</p>
+<ul>
+<li><strong>原码</strong>：我们将数字的二进制表示的最高位视为符号位，其中 <span class="arithmatex">\(0\)</span> 表示正数，<span class="arithmatex">\(1\)</span> 表示负数，其余位表示数字的值。</li>
+<li><strong>反码</strong>：正数的反码与其原码相同，负数的反码是对其原码除符号位外的所有位取反。</li>
+<li><strong>补码</strong>：正数的补码与其原码相同，负数的补码是在其反码的基础上加 <span class="arithmatex">\(1\)</span> 。</li>
+</ul>
+<p>下图展示了原码、反码和补码之间的转换方法。</p>
+<p><img alt="原码、反码与补码之间的相互转换" src="../number_encoding.assets/1s_2s_complement.png" /></p>
+<p>「原码 true form」虽然最直观，但存在一些局限性。一方面，<strong>负数的原码不能直接用于运算</strong>。例如在原码下计算 <span class="arithmatex">\(1 + (-2)\)</span> ，得到的结果是 <span class="arithmatex">\(-3\)</span> ，这显然是不对的。</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp; 1 + (-2) \newline
+&amp; \rightarrow 0000 \; 0001 + 1000 \; 0010 \newline
+&amp; = 1000 \; 0011 \newline
+&amp; \rightarrow -3
+\end{aligned}
+\]</div>
+<p>为了解决此问题，计算机引入了「反码 1's complement code」。如果我们先将原码转换为反码，并在反码下计算 <span class="arithmatex">\(1 + (-2)\)</span> ，最后将结果从反码转化回原码，则可得到正确结果 <span class="arithmatex">\(-1\)</span> 。</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp; 1 + (-2) \newline
+&amp; \rightarrow 0000 \; 0001 \; \text{(原码)} + 1000 \; 0010 \; \text{(原码)} \newline
+&amp; = 0000 \; 0001 \; \text{(反码)} + 1111  \; 1101 \; \text{(反码)} \newline
+&amp; = 1111 \; 1110 \; \text{(反码)} \newline
+&amp; = 1000 \; 0001 \; \text{(原码)} \newline
+&amp; \rightarrow -1
+\end{aligned}
+\]</div>
+<p>另一方面，<strong>数字零的原码有 <span class="arithmatex">\(+0\)</span> 和 <span class="arithmatex">\(-0\)</span> 两种表示方式</strong>。这意味着数字零对应着两个不同的二进制编码，其可能会带来歧义。比如在条件判断中，如果没有区分正零和负零，则可能会导致判断结果出错。而如果我们想要处理正零和负零歧义，则需要引入额外的判断操作，其可能会降低计算机的运算效率。</p>
+<div class="arithmatex">\[
+\begin{aligned}
++0 &amp; \rightarrow 0000 \; 0000 \newline
+-0 &amp; \rightarrow 1000 \; 0000
+\end{aligned}
+\]</div>
+<p>与原码一样，反码也存在正负零歧义问题，因此计算机进一步引入了「补码 2's complement code」。我们先来观察一下负零的原码、反码、补码的转换过程：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+-0 \rightarrow \; &amp; 1000 \; 0000 \; \text{(原码)} \newline
+= \; &amp; 1111 \; 1111 \; \text{(反码)} \newline
+= 1 \; &amp; 0000 \; 0000 \; \text{(补码)} \newline
+\end{aligned}
+\]</div>
+<p>在负零的反码基础上加 <span class="arithmatex">\(1\)</span> 会产生进位，但 <code>byte</code> 类型的长度只有 8 位，因此溢出到第 9 位的 <span class="arithmatex">\(1\)</span> 会被舍弃。也就是说，<strong>负零的补码为 <span class="arithmatex">\(0000 \; 0000\)</span> ，与正零的补码相同</strong>。这意味着在补码表示中只存在一个零，正负零歧义从而得到解决。</p>
+<p>还剩余最后一个疑惑：<code>byte</code> 类型的取值范围是 <span class="arithmatex">\([-128, 127]\)</span> ，多出来的一个负数 <span class="arithmatex">\(-128\)</span> 是如何得到的呢？我们注意到，区间 <span class="arithmatex">\([-127, +127]\)</span> 内的所有整数都有对应的原码、反码和补码，并且原码和补码之间是可以互相转换的。</p>
+<p>然而，<strong>补码 <span class="arithmatex">\(1000 \; 0000\)</span> 是一个例外，它并没有对应的原码</strong>。根据转换方法，我们得到该补码的原码为 <span class="arithmatex">\(0000 \; 0000\)</span> 。这显然是矛盾的，因为该原码表示数字 <span class="arithmatex">\(0\)</span> ，它的补码应该是自身。计算机规定这个特殊的补码 <span class="arithmatex">\(1000 \; 0000\)</span> 代表 <span class="arithmatex">\(-128\)</span> 。实际上，<span class="arithmatex">\((-1) + (-127)\)</span> 在补码下的计算结果就是 <span class="arithmatex">\(-128\)</span> 。</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp; (-127) + (-1) \newline
+&amp; \rightarrow 1111 \; 1111 \; \text{(原码)} + 1000 \; 0001 \; \text{(原码)} \newline
+&amp; = 1000 \; 0000 \; \text{(反码)} + 1111  \; 1110 \; \text{(反码)} \newline
+&amp; = 1000 \; 0001 \; \text{(补码)} + 1111  \; 1111 \; \text{(补码)} \newline
+&amp; = 1000 \; 0000 \; \text{(补码)} \newline
+&amp; \rightarrow -128
+\end{aligned}
+\]</div>
+<p>你可能已经发现，上述的所有计算都是加法运算。这暗示着一个重要事实：<strong>计算机内部的硬件电路主要是基于加法运算设计的</strong>。这是因为加法运算相对于其他运算（比如乘法、除法和减法）来说，硬件实现起来更简单，更容易进行并行化处理，运算速度更快。</p>
+<p>请注意，这并不意味着计算机只能做加法。<strong>通过将加法与一些基本逻辑运算结合，计算机能够实现各种其他的数学运算</strong>。例如，计算减法 <span class="arithmatex">\(a - b\)</span> 可以转换为计算加法 <span class="arithmatex">\(a + (-b)\)</span> ；计算乘法和除法可以转换为计算多次加法或减法。</p>
+<p>现在我们可以总结出计算机使用补码的原因：基于补码表示，计算机可以用同样的电路和操作来处理正数和负数的加法，不需要设计特殊的硬件电路来处理减法，并且无须特别处理正负零的歧义问题。这大大简化了硬件设计，提高了运算效率。</p>
+<p>补码的设计非常精妙，因篇幅关系我们就先介绍到这里，建议有兴趣的读者进一步深度了解。</p>
+<h2 id="_3">浮点数编码</h2>
+<p>细心的你可能会发现：<code>int</code> 和 <code>float</code> 长度相同，都是 4 bytes ，但为什么 <code>float</code> 的取值范围远大于 <code>int</code> ？这非常反直觉，因为按理说 <code>float</code> 需要表示小数，取值范围应该变小才对。</p>
+<p>实际上，<strong>这是因为浮点数 <code>float</code> 采用了不同的表示方式</strong>。记一个 32-bit 长度的二进制数为：</p>
+<div class="arithmatex">\[
+b_{31} b_{30} b_{29} \ldots b_2 b_1 b_0
+\]</div>
+<p>根据 IEEE 754 标准，32-bit 长度的 <code>float</code> 由以下三个部分构成。</p>
+<ul>
+<li>符号位 <span class="arithmatex">\(\mathrm{S}\)</span> ：占 1 bit ，对应 <span class="arithmatex">\(b_{31}\)</span> 。</li>
+<li>指数位 <span class="arithmatex">\(\mathrm{E}\)</span> ：占 8 bits ，对应 <span class="arithmatex">\(b_{30} b_{29} \ldots b_{23}\)</span> 。</li>
+<li>分数位 <span class="arithmatex">\(\mathrm{N}\)</span> ：占 23 bits ，对应 <span class="arithmatex">\(b_{22} b_{21} \ldots b_0\)</span> 。</li>
+</ul>
+<p>二进制数 <code>float</code> 对应的值的计算方法：</p>
+<div class="arithmatex">\[
+\text {val} = (-1)^{b_{31}} \times 2^{\left(b_{30} b_{29} \ldots b_{23}\right)_2-127} \times\left(1 . b_{22} b_{21} \ldots b_0\right)_2
+\]</div>
+<p>转化到十进制下的计算公式：</p>
+<div class="arithmatex">\[
+\text {val}=(-1)^{\mathrm{S}} \times 2^{\mathrm{E} -127} \times (1 + \mathrm{N})
+\]</div>
+<p>其中各项的取值范围：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\mathrm{S} \in &amp; \{ 0, 1\}, \quad \mathrm{E} \in \{ 1, 2, \dots, 254 \} \newline
+(1 + \mathrm{N}) = &amp; (1 + \sum_{i=1}^{23} b_{23-i} 2^{-i}) \subset [1, 2 - 2^{-23}]
+\end{aligned}
+\]</div>
+<p><img alt="IEEE 754 标准下的 float 的计算示例" src="../number_encoding.assets/ieee_754_float.png" /></p>
+<p>观察上图，给定一个示例数据 <span class="arithmatex">\(\mathrm{S} = 0\)</span> ， <span class="arithmatex">\(\mathrm{E} = 124\)</span> ，<span class="arithmatex">\(\mathrm{N} = 2^{-2} + 2^{-3} = 0.375\)</span> ，则有：</p>
+<div class="arithmatex">\[
+\text { val } = (-1)^0 \times 2^{124 - 127} \times (1 + 0.375) = 0.171875
+\]</div>
+<p>现在我们可以回答最初的问题：<strong><code>float</code> 的表示方式包含指数位，导致其取值范围远大于 <code>int</code></strong> 。根据以上计算，<code>float</code> 可表示的最大正数为 <span class="arithmatex">\(2^{254 - 127} \times (2 - 2^{-23}) \approx 3.4 \times 10^{38}\)</span> ，切换符号位便可得到最小负数。</p>
+<p><strong>尽管浮点数 <code>float</code> 扩展了取值范围，但其副作用是牺牲了精度</strong>。整数类型 <code>int</code> 将全部 32 位用于表示数字，数字是均匀分布的；而由于指数位的存在，浮点数 <code>float</code> 的数值越大，相邻两个数字之间的差值就会趋向越大。</p>
+<p>如下表所示，指数位 <span class="arithmatex">\(E = 0\)</span> 和 <span class="arithmatex">\(E = 255\)</span> 具有特殊含义，<strong>用于表示零、无穷大、<span class="arithmatex">\(\mathrm{NaN}\)</span> 等</strong>。</p>
+<p align="center"> 表 <id> &nbsp; 指数位含义 </p>
+
+<table>
+<thead>
+<tr>
+<th>指数位 E</th>
+<th>分数位 <span class="arithmatex">\(\mathrm{N} = 0\)</span></th>
+<th>分数位 <span class="arithmatex">\(\mathrm{N} \ne 0\)</span></th>
+<th>计算公式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(0\)</span></td>
+<td><span class="arithmatex">\(\pm 0\)</span></td>
+<td>次正规数</td>
+<td><span class="arithmatex">\((-1)^{\mathrm{S}} \times 2^{-126} \times (0.\mathrm{N})\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(1, 2, \dots, 254\)</span></td>
+<td>正规数</td>
+<td>正规数</td>
+<td><span class="arithmatex">\((-1)^{\mathrm{S}} \times 2^{(\mathrm{E} -127)} \times (1.\mathrm{N})\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(255\)</span></td>
+<td><span class="arithmatex">\(\pm \infty\)</span></td>
+<td><span class="arithmatex">\(\mathrm{NaN}\)</span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>值得说明的是，次正规数显著提升了浮点数的精度。最小正正规数为 <span class="arithmatex">\(2^{-126}\)</span> ，最小正次正规数为 <span class="arithmatex">\(2^{-126} \times 2^{-23}\)</span> 。</p>
+<p>双精度 <code>double</code> 也采用类似 <code>float</code> 的表示方法，在此不做赘述。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2023 <a href="https://github.com/poshakjaiswal"  target="_blank" rel="noopener">James Willett</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/james-willett" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/TheJamesWillett" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/willettjames/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>
